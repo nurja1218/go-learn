@@ -11,8 +11,8 @@ type Account struct {
 	password string
 }
 
-var insufficientBalance = errors.New("your balance is insufficient")
-var notExistAccount = errors.New("Account not exist")
+var insufficientBalance = errors.New("balance is insufficient")
+var notExistAccount = errors.New("account not exist")
 var accounts map[string]*Account
 
 // 계좌 생성
@@ -52,6 +52,7 @@ func Withdraw(accountNumber string, amount int) error {
 	// 잔액부족
 	if accounts[accountNumber].balance < amount {
 		return insufficientBalance
+
 	}
 	accounts[accountNumber].balance -= amount
 	return nil
