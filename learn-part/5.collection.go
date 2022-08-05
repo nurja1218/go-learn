@@ -60,7 +60,6 @@ func MapFunc()  {
         println("empty three key")
     }
 
-
 	for key, val := range m {
 		println(key, val)
 	}
