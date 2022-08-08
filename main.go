@@ -18,9 +18,9 @@ const (
 )
 
 func main() {
-	var connectionString = fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?parseTime=true", user, password, host, database)
+	var conn = fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?parseTime=true", user, password, host, database)
 
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", conn)
 	defer db.Close()
 	if err != nil {
 		log.Fatal(err)

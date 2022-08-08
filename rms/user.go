@@ -1,0 +1,5 @@
+package rms
+
+func GetAllUser() {
+
+}
