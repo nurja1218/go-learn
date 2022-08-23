@@ -1,0 +1,13 @@
+{
+  "name": "production",
+  "type": "mysql",
+  "host": "bio-prod.cluster-ckidrcrtlvp7.ap-northeast-2.rds.amazonaws.com",
+  "port": 3306,
+  "username": "bioprod",
+  "password": "wze7brr+d%Q(P#J8",
+  "database": "RMS",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": false,
+  "logging": ["error"],
+  "maxQueryExecutionTime": 1000
+}

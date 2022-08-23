@@ -10,16 +10,10 @@ import (
 	"github.com/nurja1218/go-learn/logis"
 )
 
-const (
-	host     = "127.0.0.1"
-	database = "logis"
-	user     = "jayden"
-	password = "jayden1"
-)
-
 func main() {
-	var conn = fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?parseTime=true", user, password, host, database)
+}
 
+func callLogisQuery(conn string) {
 	db, err := sql.Open("mysql", conn)
 	defer db.Close()
 	if err != nil {
